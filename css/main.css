@@ -1,0 +1,75 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.dino-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.dino:nth-child(2),
+.dino:nth-child(4) {
+  display: none;
+}
+
+@media (min-width: 25em) {
+
+  .dino:nth-child(2),
+  .dino:nth-child(4) {
+    display: block;
+  }
+
+  .dino {
+    width: 50%;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (min-width: 38em) {
+
+  .dino:first-child {
+    display: none;
+  }
+
+  .dino {
+    width: 33.3333%;
+  }
+
+}
+
+@media (min-width: 60em) {
+
+  .dino:first-child {
+    display: block;
+  }
+
+  .dino {
+    width: 25%;
+  }
+
+}
